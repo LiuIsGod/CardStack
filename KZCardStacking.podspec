@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KZCardStacking"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "基于UICollectionView的卡片堆叠效果"
 
   # This description is used to generate tags and improve search results.

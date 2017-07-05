@@ -1,7 +1,7 @@
 platform:ios,'9.0'
 use_frameworks!
 target 'CardStacking' do
-    
+
 pod 'pop', '~> 1.0.9'
-pod 'SwiftyJSON', '~> 3.1.4'
+
 end

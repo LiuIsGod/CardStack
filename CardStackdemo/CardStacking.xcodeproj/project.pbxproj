@@ -16,7 +16,7 @@
 		E3100C071F0B76820078753A /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3100C051F0B76820078753A /* CardCollectionViewCell.swift */; };
 		E3100C081F0B76820078753A /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3100C061F0B76820078753A /* CardCollectionViewCell.xib */; };
 		E3100C0A1F0B80300078753A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3100C091F0B80300078753A /* BaseViewController.swift */; };
-		E3100C171F0CC3260078753A /* KZCardStacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3100C151F0CC3260078753A /* KZCardStacking.swift */; };
+		E3100C1B1F0CC7430078753A /* KZCardStacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3100C1A1F0CC7430078753A /* KZCardStacking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		E3100C051F0B76820078753A /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		E3100C061F0B76820078753A /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		E3100C091F0B80300078753A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		E3100C151F0CC3260078753A /* KZCardStacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZCardStacking.swift; sourceTree = "<group>"; };
+		E3100C1A1F0CC7430078753A /* KZCardStacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZCardStacking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 		E3100BEE1F0B6C860078753A /* CardStacking */ = {
 			isa = PBXGroup;
 			children = (
-				E3100C141F0CC3260078753A /* KZCardStacking */,
+				E3100C191F0CC7430078753A /* KZCardStacking */,
 				E3100C051F0B76820078753A /* CardCollectionViewCell.swift */,
 				E3100C061F0B76820078753A /* CardCollectionViewCell.xib */,
 				E3100BEF1F0B6C860078753A /* AppDelegate.swift */,
@@ -100,10 +100,10 @@
 			path = CardStacking;
 			sourceTree = "<group>";
 		};
-		E3100C141F0CC3260078753A /* KZCardStacking */ = {
+		E3100C191F0CC7430078753A /* KZCardStacking */ = {
 			isa = PBXGroup;
 			children = (
-				E3100C151F0CC3260078753A /* KZCardStacking.swift */,
+				E3100C1A1F0CC7430078753A /* KZCardStacking.swift */,
 			);
 			path = KZCardStacking;
 			sourceTree = "<group>";
@@ -233,11 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3100C171F0CC3260078753A /* KZCardStacking.swift in Sources */,
 				E3100C0A1F0B80300078753A /* BaseViewController.swift in Sources */,
 				E3100C071F0B76820078753A /* CardCollectionViewCell.swift in Sources */,
 				E3100BF21F0B6C860078753A /* ViewController.swift in Sources */,
 				E3100BF01F0B6C860078753A /* AppDelegate.swift in Sources */,
+				E3100C1B1F0CC7430078753A /* KZCardStacking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

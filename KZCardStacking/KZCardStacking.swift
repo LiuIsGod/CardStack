@@ -23,7 +23,7 @@ import UIKit
     @objc optional func panGestureRecognizerChanged(collectionView:UICollectionView,moveCell:UICollectionViewCell)
 }
 
-class KZCardStackingCollectionView: UICollectionView {
+public class KZCardStackingCollectionView: UICollectionView {
     
     weak open var cardDelegate: KZCardStackingDelegate?
     
@@ -81,13 +81,13 @@ class KZCardStackingCollectionView: UICollectionView {
         addGestureRecognizer(panG)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
 }
 
-class KZCardStackingLayout: UICollectionViewLayout {
+public class KZCardStackingLayout: UICollectionViewLayout {
     /// cell头部距离
     var cardDrop = 0.0
     /// 各个cell之间的比例
@@ -102,11 +102,11 @@ class KZCardStackingLayout: UICollectionViewLayout {
     var moved = false
     private  var attrsAry:[UICollectionViewLayoutAttributes] = []
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return attrsAry
     }
     
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         self.attrsAry.removeAll()
         let count:Int = (self.collectionView?.numberOfItems(inSection: 0))!

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CardCollectionViewCell" customModule="CardStacking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="261" height="185"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="261" height="185"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7mx-Ju-6h3">
+                        <rect key="frame" x="0.0" y="0.0" width="261" height="185"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeC-hZ-gZS">
+                        <rect key="frame" x="0.0" y="158.5" width="261" height="26.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="7mx-Ju-6h3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2j3-hX-EW8"/>
+                <constraint firstAttribute="bottom" secondItem="PeC-hZ-gZS" secondAttribute="bottom" id="5OR-HP-EWz"/>
+                <constraint firstItem="7mx-Ju-6h3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IFa-bZ-Txq"/>
+                <constraint firstItem="PeC-hZ-gZS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OJg-rb-SQS"/>
+                <constraint firstAttribute="trailing" secondItem="PeC-hZ-gZS" secondAttribute="trailing" id="Y1g-AD-ec2"/>
+                <constraint firstAttribute="trailing" secondItem="7mx-Ju-6h3" secondAttribute="trailing" id="apU-ma-mxP"/>
+                <constraint firstAttribute="bottom" secondItem="7mx-Ju-6h3" secondAttribute="bottom" id="tdK-js-qxO"/>
+            </constraints>
+            <size key="customSize" width="261" height="185"/>
+            <connections>
+                <outlet property="cardImg" destination="7mx-Ju-6h3" id="PUi-pD-ZVN"/>
+                <outlet property="titleLabel" destination="PeC-hZ-gZS" id="jKn-Rj-cWL"/>
+            </connections>
+            <point key="canvasLocation" x="139.5" y="121.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

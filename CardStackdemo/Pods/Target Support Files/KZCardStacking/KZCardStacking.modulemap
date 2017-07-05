@@ -1,0 +1,6 @@
+framework module KZCardStacking {
+  umbrella header "KZCardStacking-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,5 +3,5 @@ use_frameworks!
 target 'CardStacking' do
 
 pod 'pop', '~> 1.0.9'
-
+pod 'KZCardStacking','~> 1.0.2'
 end

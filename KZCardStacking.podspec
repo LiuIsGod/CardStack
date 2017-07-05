@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KZCardStacking"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of KZCardStacking."
+  s.version      = "1.0.1"
+  s.summary      = "基于UICollectionView的卡片堆叠效果"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+It is a card stack view used on iOS, which implement by Swift.
                    DESC
 
   s.homepage     = "https://github.com/CrawlingSnail/CardStack.git"
@@ -38,8 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+s.license      = { :type => "MIT", :file => "https://github.com/CrawlingSnail/CardStack/blob/master/LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "huangyuhua2017@gmail.com" => "huangyuhua2017@gmail.com" }
+  s.author             = { "Running Snail" => "huangyuhua2017@gmail.com" }
   # Or just: s.author    = "huangyuhua2017@gmail.com"
   # s.authors            = { "huangyuhua2017@gmail.com" => "huangyuhua2017@gmail.com" }
   # s.social_media_url   = "http://twitter.com/huangyuhua2017@gmail.com"
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -90,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+s.source_files  = "KZCardStacking", "KZCardStacking/**/*.swift"
+s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 

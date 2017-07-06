@@ -31,17 +31,18 @@ public class KZCardStackingCollectionView: UICollectionView {
     
     func panHandle(_ panGesture:UIPanGestureRecognizer){
         /// 当前cell总数
-        let count:Int = (numberOfItems(inSection: 0))
-        if (!(count > 0)) {return}
+        let count:Int = numberOfItems(inSection: 0)
+        guard count>0 else {return}
         if (KZCardStackingCollectionView.moveCell == nil) {
             let indexPath:IndexPath = IndexPath(row: 0, section: 0)
             let cell = cellForItem(at: indexPath)
             //获取手势点 判断是否在作用范围
             let xpoint = panGesture.location(in: self)
-            if !((cell?.frame.contains(xpoint))!) {return}
+            guard (cell?.frame.contains(xpoint))! else {return}
             KZCardStackingCollectionView.moveCell = cell
-            let layout = collectionViewLayout as! KZCardStackingLayout
-            layout.moved = true
+            if let layout = collectionViewLayout as? KZCardStackingLayout {
+                layout.moved = true
+            }
             if count > 1 {
                 reloadItems(at: [IndexPath.init(row: 1, section: 0)])
             }
@@ -57,8 +58,9 @@ public class KZCardStackingCollectionView: UICollectionView {
             let indexPath = IndexPath.init(row: 0, section: 0)
             if count > 1 {
                 let cell = cellForItem(at: IndexPath.init(row: 1, section: 0))
-                let layout = collectionViewLayout as! KZCardStackingLayout
-                layout.moved = false
+                if let layout = collectionViewLayout as? KZCardStackingLayout {
+                    layout.moved = false
+                }
                 if  Double((KZCardStackingCollectionView.moveCell?.center.x)!) > Double((cell?.frame.minX)!) && Double((KZCardStackingCollectionView.moveCell?.center.x)!) < Double((cell?.frame.maxX)!){
                     reloadItems(at: [indexPath])
                 }else{
@@ -95,7 +97,7 @@ public class KZCardStackingLayout: UICollectionViewLayout {
     /// cell宽高比(默认1:1)
     public var aspectRatio = 1.0
     /// 显示的图片数目，默认比设置的多一张
-    public var maxlevel = 2
+    public var maxlevel = 3
     /// cell宽度和collectionView的比例
     public var widthScale = 0.5
     /// 顶端cell是否在移动
@@ -127,8 +129,14 @@ public class KZCardStackingLayout: UICollectionViewLayout {
         /// 设置cell层级关系
         attrs.zIndex = (self.collectionView?.numberOfItems(inSection: 0))! - indexPath.row
         let dump =  CGFloat(aspectRatio)*width*CGFloat(1 - pow(scale, Double(level))) + CGFloat(Double(level)*cardDrop)
-        attrs.center = CGPoint.init(x: (self.collectionView?.center.x)!, y: (self.collectionView?.center.y)! - dump)
-        attrs.bounds = CGRect.init(x: 0, y: 0, width:width*CGFloat(pow(scale, Double(level))), height: CGFloat(aspectRatio)*width*CGFloat(pow(scale, Double(level))))
+        if  indexPath.row - (self.moved ? 1:0) > maxlevel{ //不在显示范围
+            attrs.center = CGPoint.init(x: (self.collectionView?.center.x)!, y: (self.collectionView?.center.y)! - dump - (self.collectionView?.frame.size.height)!)
+            attrs.bounds = .zero
+        }else{
+            attrs.center = CGPoint.init(x: (self.collectionView?.center.x)!, y: (self.collectionView?.center.y)! - dump)
+            attrs.bounds = CGRect.init(x: 0, y: 0, width:width*CGFloat(pow(scale, Double(level))), height: CGFloat(aspectRatio)*width*CGFloat(pow(scale, Double(level))))
+        }
+
         return attrs
     }
     

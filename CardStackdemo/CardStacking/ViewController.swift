@@ -24,6 +24,22 @@ class ViewController: BaseViewController,UICollectionViewDataSource,UICollection
         var a:[String] = []
         for i in 1 ..< 11{
             a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
+            a.append("\(i)")
         }
         return a
     }()
